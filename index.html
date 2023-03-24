@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6d9d9ca7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>S.A.A Moto World</title>
+</head>
+<body>
+    <section class="container">
+        <nav class="navigation">
+            <div class="nav">
+                
+                <a href="index.html"><img src="images/336604241_3439259816296916_1967809524456763300_n.png" alt=""></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="motorcycle.html">Motorcycle</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main">
+            <div>
+                <h1>HONDA REBEL</h1>
+                <p>Very much highway-capable but still extremely comfortable and affordable <br> the Honda Rebel 500 is the ideal beginner's bike.</p>
+                <a href="#">INQUIRE NOW</a>
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <h1>FEATURED <span>MOTORCYCLE</span></h1>
+        <div class="sub-featured">
+            <div class="motor">
+                <img src="images/motor2.png" width="450px" alt="">
+                <h3>HONDA <span>REBEL</span></h3>
+            </div>
+            <div class="motor">
+                <img src="images/suzuki-removebg-preview-removebg-preview.png" alt="">
+                <h3>SUZUKI <span>GSX R150</span></h3>
+            </div>
+            <div class="motor">
+                <img src="images/motor1-removebg-preview.png" width="350px" alt="">
+                <h3>YAMAHA <span>SNIPER 155 R</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener("scroll", ()=> {
+            let nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+</body>
+</html>
