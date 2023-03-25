@@ -11,6 +11,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.motor-links .active {
+    background-color: red;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -79,6 +83,7 @@ nav.sticky ul li a{
     padding: 0 100px;
     margin: 0;
     margin-bottom: 50px;
+    color: #fff;
 }
 
 .main a {
@@ -115,6 +120,8 @@ nav.sticky ul li a{
 .sub-featured {
     height: 40vh;
     display: flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .motor {
@@ -140,7 +147,7 @@ nav.sticky ul li a{
 
 .motor-container .navigation {
     border-bottom: none;
-
+    background-color: #fff;
 }
 
 .motor-container .navigation a{
@@ -162,4 +169,75 @@ nav.sticky ul li a{
 .motorcycle-logo img {
     width: 150px;
     margin: 100px  30px 0 30px;
+}
+
+.motor-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motor-links a{
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: #454545;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+
+.motor-links a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.honda {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.box {
+    width: 300px;
+    min-height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
+    border: 1px solid #ccc;
+}
+
+.box p {
+    padding: 0 20px;
+}
+
+.box h4 {
+    padding: 0 20px;
+}
+
+.box-img{
+    overflow: hidden;
+}
+
+.box-img img {
+    max-width: 300px;
+    height: 300px;
+    transition: 0.3s;
+}
+
+.box-img img:hover {
+    transform: scale(1.1);
+}
+
+.box button {
+    color: #fff;
+    outline: none;
+    border: 0;
+    background-color: red;
+    margin: 10px 15px;
+    padding: 10px 10px;
+    width: 90%;
 }

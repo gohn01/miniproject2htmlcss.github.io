@@ -1,0 +1,138 @@
+Honda Scooters
+Dio  srp:  59,900
+BeAt Street (STD) srp: 70,900
+BeAT Fashion Sport (STD) srp: 70,900
+BeAT Premium (ISS/CBS) srp: 73,900
+Genio srp: 72,900
+CLICK125 srp: 80,900
+CLICK160 srp: 122,900
+PCX160-CBS srp: 133,900
+PCX160-ABS srp: 151,900
+ADV160 srp: 164,900
+ 
+Honda OffRoadSport
+XR150L srp: 96,900
+CRF150L srp: 147,900
+CRF125F srp: 189,000
+CRF300L srp: 269,900
+CRF300RALLY srp: 309,900
+CRF250RX srp: 469,000
+
+Honda OnRoadSport
+CB150X srp: 173,900
+CBR150R srp: 183,900
+
+Honda Underbone
+WaveRSX(DRUM) srp: 62,000
+WaveRSX(DISC) srp: 64,900
+XRM125 DS srp: 71,900
+RS125 srp: 75,900
+
+
+Suzuki Scooter
+BURGMAN 400 srp: 399,000
+BURGMAN 200 srp: 238,000
+BURGMAN Street 125EX srp: 95,315
+Avenis 125 srp: 79,400
+Address 125 srp: 66,900
+Address :  66,900
+
+Suzuki SUPERSPORT 
+GSX-R1000R srp: 1,169,000
+GSX-R1000 srp: 1,189,000
+GSX-R125 srp: 185,000
+
+Suzuki ULTIMATE SPORT
+HAYABUSA srp: 1,199,000
+
+Suzuki KATANA 
+KATANA srp: 817,000
+
+Suzuki STREET 
+GSX-S1000 srp: 710,000
+GSX-S1000GT srp: 815,000
+GSX-8S srp: 511,500
+GSX-S-750 srp: 559,000
+GSX-S125 srp: 201,120
+SV650 srp: 399,000
+SV650x srp: 459,000
+DR-Z400SM srp: 355,152
+GSX250R srp: 179,900
+
+Suzuki CRUISER
+BOULEVARD M109R srp: 731,952
+BOULEVARDC50/T srp: 400,800
+
+
+YAMAHA 
+NMAX srp: 150,000
+Sniper 155 srp: 123,900
+Aerox 155 srp: 124,000
+Mio Gear srp: 77,400
+Mio i 125 srp: 75,900
+Xmax srp: 274,000
+YZF R15M srp: 199,000
+XSR155 srp: 175,000
+Mio Sporty srp: 71,400
+MT-15 srp: 172,000
+Mio Fazzio srp: 88,900
+YZF-R3 srp: 279,000
+Mio Gravis srp: 89,900
+Mio Soul i 125 srp: 79,900
+YTX 125 srp: 52,900
+Super Tenere ES srp: 999,000
+YZF R1M srp: 1,689,000
+XSR700 srp: 539,000
+SR400 srp: 329,000
+Tracer 9 GT srp: 929,000
+MT-07 srp: 499,000
+MT-10 SP srp: 1,099,000
+TMAX Techmax srp: 849,000
+Tenere 700 srp: 699,000
+YZF R7 srp: 597,000
+BOLT R-SPEC srp: 619,000
+TMAX srp: 779,000 
+XTZ 125 srp: 87,000
+Serow 250 srp: 240,500
+MT-03 srp: 254,000
+WR155R srp: 169,000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
