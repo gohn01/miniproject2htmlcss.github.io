@@ -1,0 +1,1186 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #fff;
+  background: #007bff;
+}
+body{
+  padding: 10px;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper nav{
+  display: flex;
+  justify-content: center;
+}
+.wrapper .items{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: space-between;
+}
+.items span{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #007bff;
+  border-radius: 50px;
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+}
+.items span.active,
+.items span:hover{
+  color: #fff;
+  background: #007bff;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 7px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 50%;
+  height: 50%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+.gallery .image button{
+  
+    color: #fff;
+    outline: none;
+    border: 0;
+    background-color: red;
+    margin: 10px 15px;
+    padding: 10px 10px;
+    width: 90%;
+}
+
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.items .active {
+    background-color: red;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 100px;
+    z-index: 1000;
+    transition: 0.6s;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
+}
+
+nav.sticky{
+    background: #fff;
+}
+
+nav.sticky ul li a{
+    color: #000;
+}
+
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 5px;
+    color: #fff;
+}
+
+.nav img {
+    padding: 50px 0;
+    width: 300px;
+}
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+}
+
+.main h1 {
+    font-size: 7rem;
+    color: red;
+    padding: 0 100px;
+    text-shadow: 10px 10px 20px #000;
+}
+
+.main p {
+    padding: 0 100px;
+    margin: 0;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.main a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 0 0 100px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+}
+
+/* featured */
+
+.featured {
+    height: 30vh;
+    width: 100%;
+    background-image: url('/images/Row-of-Tires-Lined-Up.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    padding: 80px 0;
+    text-shadow: 10px 10px 10px #000;
+}
+
+.featured h1 span {
+    color: red;
+}
+
+.sub-featured {
+    height: 40vh;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.motor {
+    min-width: 400px;
+    text-align: center;
+    height: 500px;
+}
+
+.motor h3 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 3px 1px 8px #000;
+}
+
+.motor h3 span {
+    color: red;
+}
+
+/* motorcycle */
+.motor-container {
+    color: #000;
+}
+
+.motor-container .navigation {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.motor-container .navigation a{
+    color: #000;
+}
+
+.motorcycle {
+    height: 30vh;
+    margin-top: 50px;
+}
+
+.motorcycle-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.motorcycle-logo img {
+    width: 150px;
+    margin: 100px  30px 0 30px;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items span{
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: #454545;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+
+.items a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.honda {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.box {
+    width: 300px;
+    min-height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
+    border: 1px solid #ccc;
+}
+
+.box p {
+    padding: 0 20px;
+}
+
+.box h4 {
+    padding: 0 20px;
+}
+
+.box-img{
+    display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+.box-img img {
+    margin: 3px;
+	width: calc(50% - 6px);
+	height: auto;
+	animation: 0.55s ease-in-out fadeIn forwards;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.box-img img:hover {
+    transform: scale(1.1);
+}
+
+.box button {
+    color: #fff;
+    outline: none;
+    border: 0;
+    background-color: red;
+    margin: 10px 15px;
+    padding: 10px 10px;
+    width: 90%;
+}
+.motor-link {
+	list-style: none;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.motor-link .selected {
+	background: #2f90fc;
+	padding: 5px 10px;
+	border-radius: 4px;
+	color: white;
+}
+.motor-link li:not(:last-child) {
+	margin-right: 30px;
+}
+.motor-link li {
+	font-size: 1.2em;
+	cursor: pointer;
+}
+@media (max-width: 1000px) {
+    .gallery .image{
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery .image{
+      width: calc(100% / 2);
+    }
+  }
+  @media (max-width: 700px) {
+    .wrapper nav .items{
+      max-width: 600px;
+    }
+    nav .items span{
+      padding: 7px 15px;
+    }
+  }
+  @media (max-width: 600px) {
+    .wrapper{
+      margin: 10px auto;
+    }
+    .wrapper nav .items{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav .items span{
+      margin: 5px;
+    }
+    .gallery .image{
+      width: 100%;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <section class="motor-container">
+    <nav class="navigation">
+        <div class="nav">
+            
+            <a href="index.html"><img src="images/336604241_3439259816296916_1967809524456763300_n.png" alt=""></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Motorcycle</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Parts</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<section class="logo-section">
+    <div class="motorcycle-logo">
+        <img src="images/Honda_Logo.svg.png" alt="">
+        <img src="images/Suzuki_logo_2.svg.png" alt="">
+        <img src="images/yamaha.jpg" alt="">
+    </div>
+
+
+  <div class="wrapper">
+    <!-- filter Items -->
+      <div class="items">
+        <span class="item active" data-name="all">All</span>
+        <span class="item" data-name="Honda">HONDA</span>
+        <span class="item" data-name="Suzuki">SUZUKI</span>
+        <span class="item" data-name="Yamaha">Yamaha</span>
+      </div>
+  </div>
+    <!-- filter Images -->
+    <div class="gallery">
+<!-- for Honda motorcycle-->
+        <div class="image" data-name="Honda">
+          
+            <span>
+                <img src="images/honda/dio.png" alt="">
+            </span>
+            <p class="motorname">DIO</p>
+            <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 59,900</h4>
+            <button href="#">View Full Specs</button>
+        </div> 
+
+        <div class="image" data-name="Honda">
+            <span>
+                <img src="images/honda/beatstreetstd.png" alt="">
+            </span>
+                <p class="motorname">BeAT Street (STD)</p>
+                <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 70,900</h4>
+                <button href="#">View Full Specs</button>
+        </div>
+
+        <div class="image" data-name="Honda">
+          
+          <span>
+              <img src="images/honda/beatfashionsport.png" alt="">
+          </span>
+          <p class="motorname">BeAT Fashion Sport (STD)</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 70,900</h4>
+          <button href="#">View Full Specs</button>
+      </div> 
+
+      <div class="image" data-name="Honda">
+          
+        <span>
+            <img src="images/honda/beatpremiunIssCbs.png" alt="">
+        </span>
+        <p class="motorname">BeAT Premium(ISS/CBS)</p>
+        <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 73,900</h4>
+        <button href="#">View Full Specs</button>
+    </div> 
+
+    <div class="image" data-name="Honda">
+          
+      <span>
+          <img src="images/honda/genio.png" alt="">
+      </span>
+      <p class="motorname">Genio</p>
+      <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 72,900</h4>
+      <button href="#">View Full Specs</button>
+  </div> 
+
+  <div class="image" data-name="Honda">
+          
+    <span>
+        <img src="images/honda/theallnewclick125.png" alt="">
+    </span>
+    <p class="motorname">CLICK125</p>
+    <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 80,900</h4>
+    <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/theallnewclick160.png" alt="">
+  </span>
+  <p class="motorname">CLICK160</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 122,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/pcx160cbs.png" alt="">
+  </span>
+  <p class="motorname">PCX160-CBS</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 133,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/pcx160abs.png" alt="">
+  </span>
+  <p class="motorname">PCX160-ABS</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 151,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/theallnewadv160.png" alt="">
+  </span>
+  <p class="motorname">ADV160</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 164,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/underbone/rs125.png" alt="">
+  </span>
+  <p class="motorname">RS125</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 75,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/underbone/wacersxDisc.png" alt="">
+  </span>
+  <p class="motorname">WAVE RSX(DISC)</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 64,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/underbone/waversxDrum.png" alt="">
+  </span>
+  <p class="motorname">WAVE RSX(DRUM)</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 62,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+          
+  <span>
+      <img src="images/honda/underbone/waversxDrum.png" alt="">
+  </span>
+  <p class="motorname">WAVE RSX(DRUM)</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign price"></i> 62,900</h4>
+  <button href="#">View Full Specs</button>
+</div> 
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/underbone/xrm-125-ds-aura-blue.png" alt="">
+  </span>
+  <p class="motorname">XRM125 DS</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 62,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/onRoadSport/CBR150R.jpg" alt="">
+  </span>
+  <p class="motorname">CBR150R</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 183,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/onRoadSport/theallnewcb150x.png" alt="">
+  </span>
+  <p class="motorname">CBR150X</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 173,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/crf125f.png" alt="">
+  </span>
+  <p class="motorname">CRF125FX</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 189,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/crf150l.png" alt="">
+  </span>
+  <p class="motorname">CRF150L</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 147,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/crf250rx.png" alt="">
+  </span>
+  <p class="motorname">CRF250RX</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 469,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/CRF300L.png" alt="">
+  </span>
+  <p class="motorname">CRF300L</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 269,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/crf300rally.jpg" alt="">
+  </span>
+  <p class="motorname">CRF300 RALLY</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 309,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<div class="image" data-name="Honda">
+  <span>
+      <img src="images/honda/offRoadSport/xr150l.png" alt="">
+  </span>
+  <p class="motorname">XR150L</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 96,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+<!--for suzuki motorcycles-->
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/suzuki-burgman-400-5f1681f587af3.jpg" alt="">
+  </span>
+      <p>BURGMAN 400</p>
+      <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 399,000</h4>
+      <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/burgma200abs.jpg" alt="">
+  </span>
+  <p>BURGMAN 200</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 238,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/burgmanstreet125ex.jpg" alt="">
+  </span>
+  <p>BURGMAN STREET 125EX</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 95,315</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/Avenis125.jpg" alt="">
+  </span>
+  <p>AVENIS 125</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 79,400</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/address_125.png" alt="">
+  </span>
+  <p>ADDRESS 125</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 66,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/address.jpg" alt="">
+  </span>
+  <p>ADDRESS</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 66,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/supersport/gsxr1000r.jpg" alt="">
+  </span>
+  <p>GSX-R1000R</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 1,169,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/supersport/GSX-R1000.jpg" alt="">
+  </span>
+  <p>GSX-R1000</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 1,189,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/supersport/suzuki-gsx-r125.jpg" alt="">
+  </span>
+  <p>GSX-R125</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 185,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/ultimatesport/suzuki-hayabusa.jpeg" alt="">
+  </span>
+  <p>HAYABUSA</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 1,199,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/katana/katana.jpg" alt="">
+  </span>
+  <p>KATANA</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 817,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/cruiser/Suzuki Boulevard M109R2  2.jpg" alt="">
+  </span>
+  <p>BOULEVARD M109R</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 731,952</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/cruiser/boulevardc50t.jpg" alt="">
+  </span>
+  <p>BOULEVARD C50/T</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 400,800</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/GSx-S1000-.jpg" alt="">
+  </span>
+  <p>GSX-S1000</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 710,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/gsx-s1000gt-vehicle.jpg" alt="">
+  </span>
+  <p>GSX-S1000 GT</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 815,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/GSX8s.jpg" alt="">
+  </span>
+  <p>GSX-8S</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 511,500</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/suzuki-gsx-s-750.jpg" alt="">
+  </span>
+  <p>GSX-S-750</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 559,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/gsx-s125.png" alt="">
+  </span>
+  <p>GSX-S125</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 201,120</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/sv650.jpg" alt="">
+  </span>
+  <p>SV650</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 399,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/SV-650x.png" alt="">
+  </span>
+  <p>SV650X</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 459,000</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/dr-z400sm.jpg" alt="">
+  </span>
+  <p>DR-Z400SM</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 355,152</h4>
+  <button href="#">View Full Specs</button>
+</div>
+<div class="image" data-name="Suzuki">
+  <span>
+      <img src="images/suzuki/street/GSX250R.png" alt="">
+  </span>
+  <p>GSX 250R</p>
+  <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 179,900</h4>
+  <button href="#">View Full Specs</button>
+</div>
+
+
+
+        <!-- for yamaha motorcycle-->
+        <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/nmax.jpg" alt="">
+          </span>
+              <p>NMAX</p>
+              <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 150,000</h4>
+              <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/sniper155.jpg" alt="">
+          </span>
+          <p>Sniper 155</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 123,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/aerox155.png" alt="">
+          </span>
+          <p>AEROX 155</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 124,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/miogear.jpg" alt="">
+          </span>
+          <p>Mio Gear</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 77,400 - 82,400</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/YAMAHA-MIO-I-125.jpg" alt="">
+          </span>
+          <p>Mio i 125</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 75,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/xmax.jpg" alt="">
+          </span>
+          <p>XMAX</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 274,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/yamaha-yzf-r15m.jpeg" alt="">
+          </span>
+          <p>YZF R15M</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 199,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/xsr155.jpg" alt="">
+          </span>
+          <p>XSR155</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 175,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/Mio-Sporty.jpg" alt="">
+          </span>
+          <p>Mio Sporty</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 71,400</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/YAMAHA-MT-15.jpg" alt="">
+          </span>
+          <p>MT-15</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 172,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/miofazzio.jpg" alt="">
+          </span>
+          <p>Mio Fazzio</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 88,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/yzf-r3.png" alt="">
+          </span>
+          <p>YZF-R3</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 279,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/miogravis.jpg" alt="">
+          </span>
+          <p>Mio Gravis</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 89,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/mio-soul-i-125.jpg" alt="">
+          </span>
+          <p>Mio Soul i 125</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 79,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/ytx125.jpg" alt="">
+          </span>
+          <p>YTX 125</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 52,900</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/yzfr1m.jpg" alt="">
+          </span>
+          <p>YZF R1M</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 1,689,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/yamaha-xsr700.jpeg" alt="">
+          </span>
+          <p>XSR700</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 539,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/sr400.jpg" alt="">
+          </span>
+          <p>SR400</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 329,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/tracer9gt.jpg" alt="">
+          </span>
+          <p>Tracer 9 GT</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 929,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/mt-07.jpg" alt="">
+          </span>
+          <p>MT-07</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 499,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/tmaxtechmax.jpg" alt="">
+          </span>
+          <p>TMAX Techmax</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 849,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/BOLT-SPEC-R.jpg" alt="">
+          </span>
+          <p>BOLT R-SPEC</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 619,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/YAMAHA-TMAX-SX.jpg" alt="">
+          </span>
+          <p>TMAX</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 779,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/xtz-125-yamaha-blue.png" alt="">
+          </span>
+          <p>XTZ 125</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 87,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/serow250.jpg" alt="">
+          </span>
+          <p>Serow 250</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 240,500</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/yamaha-mt-03.jpeg" alt="">
+          </span>
+          <p>MT-03</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 254,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+      <div class="image" data-name="Yamaha">
+          <span>
+              <img src="images/yamaha/wr155r.jpg" alt="">
+          </span>
+          <p>WR155R</p>
+          <h4><b>SRP:</b><i class="fa-solid fa-peso-sign"></i> 169,000</h4>
+          <button href="#">View Full Specs</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- fullscreen img preview box -->
+  <div class="preview-box">
+    <div class="details">
+      <span class="title">Brand: <p class="motorname"></p></span>
+      <span class="icon fas fa-times"></span>
+    </div>
+    <div class="image-box"><img src="" alt=""></div>
+  </div>
+  <div class="shadow"></div>
+</section>
+<script src="main.js"></script>
+
+
+    </body>
+    </html>
+
+
+
+
+ 
