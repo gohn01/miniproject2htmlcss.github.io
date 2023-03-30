@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6d9d9ca7e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>S.A.A Moto World</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="icon" href="images/Untitled-1.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+
+        <a href="index.html" class="navbar-brand ms-3" data-bs-toggle="tooltip" title="Cover Page">
+            <img src="images/logo4.png" alt="Logo">
+        </a>
+
+            <button type="button" class="navbar-toggler bg-light me-4" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+                <!-- menu icon -->
+                <span class="navbar-toggler-icon sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Menu"></span>
+            </button>
+
+                <div class="collapse navbar-collapse text-center" id="navbarcollapse">
+                            <!-- Menu Bar -->
+                    <div class="navbar-nav ms-auto">
+                        <a href="honda.html" class="nav-item nav-link text-white ms-lg-3 ms-md-3">
+                            Motorcycle
+                        </a>
+                        <a href="services.html" class="nav-item nav-link text-white ms-lg-3 ms-md-3">
+                            Services
+                        </a>
+                        <a href="parts.html" class="nav-item nav-link text-white ms-lg-3 ms-md-3">
+                            Parts
+                        </a>
+                        <a href="contactus.html" class="nav-item nav-link text-white ms-lg-3 ms-md-3">
+                            Contact Us
+                        </a>
+                        <a href="aboutus.html" class="nav-item nav-link text-white ms-lg-3 ms-md-3 active">
+                            About Us
+                        </a>
+                        <a href="#" class="nav-item nav-link text-white ms-lg-3 ms-md-3 me-lg-5"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+    </nav>
+
+    <div class="aboutus">
+        <div class="card container-fluid alexis mb-0">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 info">
+                    <div class="card-body">
+                        <h1 class="card-text"> <span>Al</span>exis J<span>oh</span>n Per<span>ez</span></h1>
+                    </div>
+                    <div class="card-footer border-0">
+                        <a href="#" class="btn btn-danger">My Portfolio</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <img src="images/alex1.png" alt="alexis" class="card-img" data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right" >
+                </div>
+            </div>
+        </div>
+        <div class="card container-fluid shaira">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <img src="images//shaira.png" alt="shaira" class="card-img" id="img">
+                </div>
+                <div class="col-lg-6 col-sm-12 info">
+                    <div class="card-body">
+                        <h1 class="card-text"><span>Sh</span>aira <span>De</span> Leo<span>n</span> Hon<span>re</span>jas</h1>
+                    </div>
+                    <div class="card-footer border-0">
+                        <a href="#" class="btn btn-danger">My Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card container-fluid albert">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 info">
+                    <div class="card-body">
+                        <h1 class="card-text"><span>Al</span>bert Jo<span>se</span>ph Fre<span>sc</span>o</h1>
+                    </div>
+                    <div class="card-footer border-0">
+                        <a href="#" class="btn btn-danger">My Portfolio</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <img src="images//albert.png" alt="albert" class="card-img" id="img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".info"), {
+		max: 25,
+		speed: 400,
+        "max-glare": 1,
+	});
+
+    </script>
+</body>
+</html>
