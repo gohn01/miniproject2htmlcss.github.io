@@ -1,3 +1,9 @@
+//Popover in Information Icon
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
 
 function selectmcbrand(){
   let mctype = ["Scooter" , "OffRoad" , "OnRoad" , "Underbone"];
@@ -130,8 +136,10 @@ function selectmctype(){
     let model = document.getElementById("model").value;
     console.log(model);
   }
+
+
   function adddata(){
-    let payment = document.getElementById("payment").value;
+    let service = document.getElementById("service").value;
     let brand = document.getElementById("brand").value;
     let type = document.getElementById("type").value;
     let model = document.getElementById("model").value;
@@ -140,12 +148,12 @@ function selectmctype(){
     let fname = document.getElementById("fname").value;
     let mname = document.getElementById("mname").value;
     let lname = document.getElementById("lname").value;
-    let address = document.getElementById("add").value;
     let email = document.getElementById("email").value;
     let mnum = document.getElementById("mobNum").value;
- 
-  
-    console.log(payment);
+    let frommw = document.querySelector(`input[name="frommw"]:checked`).value;
+    
+    
+    console.log(service);
     console.log(brand);
     console.log(type);
     console.log(model);
@@ -154,7 +162,6 @@ function selectmctype(){
     console.log(fname);
     console.log(mname);
     console.log(lname);
-    console.log(address);
     console.log(email);
     console.log(mnum);
 
@@ -163,30 +170,29 @@ function selectmctype(){
       firstName: fname,
       middleName: mname,
       lastName: lname,
-      address: address,
       mnum: mnum,
+      email:email,
       requestdate: date,
       request: request,
-      paymenttype: payment,
+      service: service,
       brand: brand,
       type: type,
-      model: model
+      model: model,
+      fromMW: frommw,
   }
   
   
-  localStorage.setItem('clientrec', JSON.stringify(clientinquiry));
+  localStorage.setItem('servicerecord', JSON.stringify(clientinquiry));
 
   }
-
   function addtoexcel(){
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyoSthJvC_pnb6W1FRFFHKPUFyPvGrQ7SU8JtHViVZRxEcyZBebqzFCeFYYzEoNIWA/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
-  }
-  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyzO7RCgisjzRBZ9qUgY22AOFT0_tf_f5bjnvOPgBN1L8ne_0nTN6Vi8F8zHWUHwh1k/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+}

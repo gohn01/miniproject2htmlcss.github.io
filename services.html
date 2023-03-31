@@ -62,13 +62,14 @@
             <p class="title">Book your appointment below <i class="bi bi-arrow-down-circle-fill"></i></p>
         </div>
 
+        
         <div class="container appointment">
             <div class="card">
                 <div class="card-header text-center container-fluid">
                     <h2>Service Appointment</h2>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" name="submit-to-google-sheet">
                         <div class="card-title">
                             <h4>Service Appointment Details</h4>
                         </div>
@@ -87,102 +88,25 @@
                             </div>
                             <div class="col-lg-3 mb-4">
                                 <label for="brand" class="form-label"><span>*</span> MC Brand</label>
-                                <select name="brand" id="brand" class="form-select">
+                                <select name="brand" id="brand" class="form-select" onchange="selectmcbrand()"">
                                     <option value="" selected disabled>-select-</option>
-                                    <option value="changeoil">Honda</option>
-                                    <option value="brake">Suzuki</option>
-                                    <option value="chain">Yamaha</option>
+                                    <option value="Honda">Honda</option>
+                                    <option value="Suzuki">Suzuki</option>
+                                    <option value="Yamaha">Yamaha</option>
                                 </select>
                             </div>
                             <div class="col-lg-3 mb-4">
                                 <label for="type" class="form-label"><span>*</span> MC Type</label>
-                                <select name="type" id="type" class="form-select">
+                                <select name="type" id="type" class="form-select" onchange="selectmctype()">
                                     <option value="" selected disabled>-select-</option>
-                                    <option value="hondaScooter" id="honda">Honda Scooter</option>
-                                    <option value="hondaOffRoad" id="honda">Honda Off Road Sport</option>
-                                    <option value="hondaOnRoad" id="honda">Honda On Road Sport</option>
-                                    <option value="hondaUnderbone" id="honda">Honda Underbonde</option>
+                                   
                                 </select>
                             </div>
                             <div class="col-lg-3 mb-4">
                                 <label for="model" class="form-label">MC Model</label>
-                                <select name="model" id="model" class="form-select text-nowrap">
+                                <select name="model" id="model" class="form-select text-nowrap" onchange="modelchange()">
                                     <option value="" selected>-select-</option>
-                                    <option value="Dio" id="hondaScooter">Dio</option>
-                                    <option value="beatStreet" id="hondaScooter">Beat Street (STD)</option>
-                                    <option value="beatFashionSport" id="hondaScooter">Beat Fashion Sport (STD)</option>
-                                    <option value="beatPremium" id="hondaScooter">Beat Premium (ISS/CBS)</option>
-                                    <option value="genio" id="hondaScooter">Genio</option>
-                                    <option value="click125" id="hondaScooter">Click 125</option>
-                                    <option value="click160" id="hondaScooter">Click 160</option>
-                                    <option value="pcx160-cbs" id="hondaScooter">PCX 160-CBS</option>
-                                    <option value="pcx160-abs" id="hondaScooter">PCX 160-ABS</option>
-                                    <option value="adv160" id="hondaScooter">ADV 160</option>
-                                    <option value="xr150L" id="hondaOffRoadSport">XR 150 L</option>
-                                    <option value="crf150L" id="hondaOffRoadSport">CRF 150 L</option>
-                                    <option value="crf125F" id="hondaOffRoadSport">CRF 125 F</option>
-                                    <option value="crf300L" id="hondaOffRoadSport">CRF 300 L</option>
-                                    <option value="crf300Rally" id="hondaOffRoadSport">CRF 300 RALLY</option>
-                                    <option value="crf250Rx" id="hondaOffRoadSport">CRF 250 RX</option>
-                                    <option value="cb150x" id="hondaOnRoadSport">CB 150 X</option>
-                                    <option value="cbr150R" id="hondaOnRoadSport">CBR 150 R</option>
-                                    <option value="waveRSX(drum)" id="hondaUnderbone">Wave RSX (Drum)</option>
-                                    <option value="waveRsx(disc)" id="hondaUnderbone">Wave RSX (Disc)</option>
-                                    <option value="xrm125Ds" id="hondaUnderbone">XRM 125 DS</option>
-                                    <option value="rs125" id="hondaUnderbone">RS 125</option>
-                                    <option value="burgman400" id="suzukiScooter">Burgman 400</option>
-                                    <option value="burgman200" id="suzukiScooter">Burgman 200</option> 
-                                    <option value="burgmanStreet125Ex" id="suzukiScooter">Burgman Street 125 EX</option>
-                                    <option value="avenis125" id="suzukiScooter">Avenis 125</option>
-                                    <option value="address125" id="suzukiScooter">Address 125</option>
-                                    <option value="address" id="suzukiScooter">Address</option>
-                                    <option value="gsx-R1000R" id="suzukiSupersport">GSX-R1000R</option>
-                                    <option value="gsx-R1000" id="suzukiSupersport">GSX-R1000</option>
-                                    <option value="gsx-R125" id="suzukiSupersport">GSX-R125</option>
-                                    <option value="hayabusa" id="suzukiUltimateSport">Hayabusa</option>
-                                    <option value="katana" id="suzukiKatana">Katana</option>
-                                    <option value="gsx-s1000" id="suzukiStreet">GSX-S1000</option>
-                                    <option value="gsx-s1000Gt" id="suzukiStreet">GSX-S1000GT</option>
-                                    <option value="gsx-8s" id="suzukiStreet">GSX-8S</option>
-                                    <option value="gsx-s-750" id="suzukiStreet">GSX-S-750</option>
-                                    <option value="gsx-s125" id="suzukiStreet">GSX-S125</option>
-                                    <option value="sv650" id="suzukiStreet">SV650</option>
-                                    <option value="sv650x" id="suzukiStreet">SV650x</option>
-                                    <option value="dr-z400sm" id="suzukiStreet">DR-Z400SM</option>
-                                    <option value="gsx250R" id="suzukiStreet">GSX250R</option>
-                                    <option value="boulevardM109R" id="suzukiCruiser">Boulevard M109R</option>
-                                    <option value="boulevardC50/T" id="suzukiCruiser">Boulevard C50/T</option>
-                                    <option value="nmax" id="yamaha">NMAX</option>
-                                    <option value="sniper155" id="yamaha">Sniper 155</option>
-                                    <option value="aerox155" id="yamaha">Aerox 155</option>
-                                    <option value="mioGear" id="yamaha">Mio Gear</option>
-                                    <option value="mioI125" id="yamaha">Mio i 125</option>
-                                    <option value="xmax" id="yamaha">Xmax</option>
-                                    <option value="yzfR15m" id="yamaha">YZF R15M</option>
-                                    <option value="xsr155" id="yamaha">XSR155</option>
-                                    <option value="mioSporty" id="yamaha">Mio Sporty</option>
-                                    <option value="mt-15" id="yamaha">MT-15</option>
-                                    <option value="mioFazzio" id="yamaha">Mio Fazzio</option>
-                                    <option value="yzf-R3" id="yamaha">YZF-R3</option>
-                                    <option value="mioGravis" id="yamaha">Mio Gravis</option>
-                                    <option value="mioSouli125" id="yamaha">Mio Soul i 125</option>
-                                    <option value="ytx125" id="yamaha">YTX 125</option>
-                                    <option value="superTenereEs" id="yamaha">Super Tenere ES</option>
-                                    <option value="yzfR1m" id="yamaha">YZF R1M</option>
-                                    <option value="xsr700" id="yamaha">XSR700</option>
-                                    <option value="sr400" id="yamaha">SR400</option>
-                                    <option value="tracer9Gt" id="yamaha">Tracer 9 GT</option>
-                                    <option value="mt-07" id="yamaha">MT-07</option>
-                                    <option value="mt-10Sp" id="yamaha">MT-10 SP</option>
-                                    <option value="tmaxTechmax" id="yamaha">TMAX Techmax</option>
-                                    <option value="tenere700" id="yamaha">Tenere 700</option>
-                                    <option value="yzfR7" id="yamaha">YZF R7</option>
-                                    <option value="boltR-Spec" id="yamaha">BOLT R-SPEC</option>
-                                    <option value="tmax" id="yamaha">TMAX</option>
-                                    <option value="xtz125" id="yamaha">XTZ 125</option>
-                                    <option value="serow250" id="yamaha">Serow 250</option>
-                                    <option value="mt-03" id="yamaha">MT-03</option>
-                                    <option value="wr155R" id="yamaha">WR155R</option>
+                                    
                                 </select>                           
                             </div>
                         </div>
@@ -195,9 +119,9 @@
                             <div class="col-lg-4 mb-4">
                                 <label for="question" class="form-label"><span>*</span> MC Bought from Moto World?</label>
                                 <br>
-                                <input type="radio" name="question" id="yes" class="me-2 ms-2">
+                                <input type="radio" name="frommw" id="yes" value ="yes" class="me-2 ms-2">
                                 <label for="yes">Yes</label> 
-                                <input type="radio" name="question" id="no" class="ms-2 me-2"> 
+                                <input type="radio" name="frommw" id="no" value="no" class="ms-2 me-2"> 
                                 <label for="no">No</label>  
                             </div>
                             <div class="col-lg-4 mb-4">
@@ -235,13 +159,14 @@
                                 <input type="number" name="mobNum" id="mobNum" class="form-control" placeholder="09XX-XXXXXXX">
                             </div>
                         </div>
-                    </form>
+                   
 
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-danger">Submit Form</button>
+                    <button class="btn btn-danger" onclick="adddata(), addtoexcel()">Submit Form</button>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 
