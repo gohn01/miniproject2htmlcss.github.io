@@ -703,6 +703,52 @@ footer .copyright {
 }
 
 
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 350px) {
+    .services .book .title {
+        font-size: 15px;
+    }
+    .services .card-header h2 {
+        font-size: 13px;
+    }
+    .services .card-title h4 {
+        font-size: 11px;
+    }
+    .services .card-body label {
+        font-size: 10px;
+    }
+    .services .card-body option,
+    .services .card-body select, 
+    .services .card-body textarea,
+    .services .card-body input,
+    .services .card-footer button {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 351px) and (max-width: 500px){
+    .services .book .title {
+        font-size: 20px;
+    }
+    .services .card-header h2 {
+        font-size: 18px;
+    }
+    .services .card-title h4 {
+        font-size: 15px;
+    }
+    .services .card-body label {
+        font-size: 13px;
+    }
+    .services .card-body option,
+    .services .card-body select, 
+    .services .card-body textarea,
+    .services .card-body input,
+    .services .card-footer button {
+        font-size: 13px;
+    }
+}
+
+>>>>>>> daa86cd76b958aaa671cad6cd9cf6c08673178ed
 @media screen and (max-width: 315px) and (max-height: 500px){
 
     .contact .intro img {
@@ -720,4 +766,8 @@ footer .copyright {
     .intro .button button {
         font-size: 5px;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> daa86cd76b958aaa671cad6cd9cf6c08673178ed
 }
