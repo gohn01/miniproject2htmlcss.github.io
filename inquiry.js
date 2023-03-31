@@ -58,14 +58,14 @@ function selectmctype(){
     let sscooter = ["Burgman 200" , "Burgman Street 125 EX" , "Avenis 125" , "Adress 125"];
     let yscooter = ["Aerox 155" , "Mio Sporty" , "Mio Fazzio" , "Mio Gravis" , "Mio Soul i 125" , "Mio Gear" , "NMAX 155" , "Mio i 125" , "Xmax"];
     let hoffroad = ["XR 150 L" , "CRF 150" , "CRF 125" , "CRF 300 Rally" , "CRF 250rx" , "Cb 150x" , ];
-    let soffroad = [];
+    let soffroad = ["DR-ZL125L" , "DR-Z50"];
     let yoffroad = ["YTX 125"];
     let honroad = ["CB 150 X", "CBR 150 R" ];
     let sonroad = ["GSX S1000" , "GSX-S1000GT" , "GSX 8s" , "GSX S 750", "GSX S 125"];
     let yonroad = ["R15m" , "XSR 155" , "MT-15" , "YZF R3" , "XSR 700"]
     let hunderbone = ["Wave RSX (Drum)" , "Wave RSX (Disc)" , "XRM 125 DS" , "RS 125"];
-    let sunderbone = [];
-    let yunderbone = [];
+    let sunderbone = ["Raider J Crossover" ,  "Raider J 115 FI(Mags)" , "Raider J 115 FI(Spokes)" , "Raider 150 (Carburator)" , "Raider 150 (FI)" , "Smash 115"];
+    let yunderbone = ["Vega Force I" , "Vega" , "Sniper 150" , "Sniper 155r" , "Sight"];
     let brandselect = document.getElementById("brand").value;
     let modelselect = document.getElementById("model");
     let mctype = document.getElementById("type").value;
