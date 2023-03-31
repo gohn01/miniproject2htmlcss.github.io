@@ -20,7 +20,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("/images/bg.jpg");
+    background-image: url("../images/bg.jpg");
     color: #fff;
 }
 
@@ -141,7 +141,7 @@ body {
     font-size: 3rem;
     padding: 80px 0;
     text-shadow: 10px 10px 10px #000;
-    background-image: url('/images/istockphoto-1207247256-612x612.jpg');
+    background-image: url("../images/istockphoto-1207247256-612x612.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -356,7 +356,7 @@ body {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/click125BackgroundHover.png");
+    background-image: url("../images/hover/click125BackgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -469,7 +469,7 @@ body {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/suzukiAddressBackgroundHover.png");
+    background-image: url("../images/hover/suzukiAddressBackgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -581,7 +581,7 @@ ul li .content h2 {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/r15backgroundHover.png");
+    background-image: url("../images/hover/r15backgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
