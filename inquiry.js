@@ -1,3 +1,29 @@
+function addtoexcell(tableID){
+  let downloadLink;
+  let datatype = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  let tableselect = Document.getElementById(tableID);
+  let tableHTMl = tableselect.outerHTML.replace(/ /g, '%20');
+
+  filename = 'inquiryform.xls';
+  downloadLink = document.createElement("a");
+  document.body.appendChild(downloadLink);
+
+  if(navigator.msSaveOrOpenBlob)
+  {
+    let blob =  new Blob(['\ufeff' , 'tableHTML'] , {
+          type: datatype
+    });
+    navigator.msSaveOrOpenBlob(blob, filename);
+  }
+  else
+  {
+    downloadLink.href = 'data' + datatype + 'a' + tableHTMl;
+    downloadLink.download = filename;
+    downloadLink.click();
+  }
+
+}
+
 function selectmcbrand(){
   let mctype = ["Scooter" , "OffRoad" , "OnRoad" , "Underbone"];
   
@@ -38,7 +64,7 @@ function selectmctype(){
     let sonroad = ["GSX S1000" , "GSX-S1000GT" , "GSX 8s" , "GSX S 750", "GSX S 125"];
     let yonroad = ["R15m" , "XSR 155" , "MT-15" , "YZF R3" , "XSR 700"]
     let hunderbone = ["Wave RSX (Drum)" , "Wave RSX (Disc)" , "XRM 125 DS" , "RS 125"];
-    let zunderbone = [];
+    let sunderbone = [];
     let yunderbone = [];
     let brandselect = document.getElementById("brand").value;
     let modelselect = document.getElementById("model");
@@ -123,6 +149,7 @@ function selectmctype(){
       })
     }
   }
+
   function modelchange()
   {
     let model = document.getElementById("model").value;
@@ -141,7 +168,8 @@ function selectmctype(){
     let address = document.getElementById("add").value;
     let email = document.getElementById("email").value;
     let mnum = document.getElementById("mobNum").value;
-
+ 
+  
     console.log(service);
     console.log(brand);
     console.log(type);
@@ -173,5 +201,7 @@ function selectmctype(){
   
   localStorage.setItem('clientrec', JSON.stringify(clientinquiry));
 
-
   }
+
+  
+  
