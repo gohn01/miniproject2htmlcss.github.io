@@ -1,0 +1,52 @@
+<option value="" selected>-select-</option>
+ 
+ 
+ 
+ <option value="waveRSX(drum)" id="hondaUnderbone">Wave RSX (Drum)</option>
+ <option value="waveRsx(disc)" id="hondaUnderbone">Wave RSX (Disc)</option>
+ <option value="xrm125Ds" id="hondaUnderbone">XRM 125 DS</option>
+ <option value="rs125" id="hondaUnderbone">RS 125</option>
+ 
+
+ <option value="gsx-R1000R" id="suzukiSupersport">GSX-R1000R</option>
+ <option value="gsx-R1000" id="suzukiSupersport">GSX-R1000</option>
+ <option value="gsx-R125" id="suzukiSupersport">GSX-R125</option>
+ <option value="hayabusa" id="suzukiUltimateSport">Hayabusa</option>
+ <option value="katana" id="suzukiKatana">Katana</option>
+ <option value="gsx-s1000" id="suzukiStreet">GSX-S1000</option>
+ <option value="gsx-s1000Gt" id="suzukiStreet">GSX-S1000GT</option>
+ <option value="gsx-8s" id="suzukiStreet">GSX-8S</option>
+ <option value="gsx-s-750" id="suzukiStreet">GSX-S-750</option>
+ <option value="gsx-s125" id="suzukiStreet">GSX-S125</option>
+ <option value="sv650" id="suzukiStreet">SV650</option>
+ <option value="sv650x" id="suzukiStreet">SV650x</option>
+ <option value="dr-z400sm" id="suzukiStreet">DR-Z400SM</option>
+ <option value="gsx250R" id="suzukiStreet">GSX250R</option>
+ <option value="boulevardM109R" id="suzukiCruiser">Boulevard M109R</option>
+ <option value="boulevardC50/T" id="suzukiCruiser">Boulevard C50/T</option>
+ 
+
+ <option value="sniper155" id="yamaha">Sniper 155</option>
+ 
+ <option value="xmax" id="yamaha">Xmax</option>
+ <option value="yzfR15m" id="yamaha">YZF R15M</option>
+ <option value="xsr155" id="yamaha">XSR155</option>
+ <option value="mt-15" id="yamaha">MT-15</option>
+ <option value="yzf-R3" id="yamaha">YZF-R3</option>
+ <option value="ytx125" id="yamaha">YTX 125</option>
+ <option value="superTenereEs" id="yamaha">Super Tenere ES</option>
+ <option value="yzfR1m" id="yamaha">YZF R1M</option>
+ <option value="xsr700" id="yamaha">XSR700</option>
+ <option value="sr400" id="yamaha">SR400</option>
+ <option value="tracer9Gt" id="yamaha">Tracer 9 GT</option>
+ <option value="mt-07" id="yamaha">MT-07</option>
+ <option value="mt-10Sp" id="yamaha">MT-10 SP</option>
+ <option value="tmaxTechmax" id="yamaha">TMAX Techmax</option>
+ <option value="tenere700" id="yamaha">Tenere 700</option>
+ <option value="yzfR7" id="yamaha">YZF R7</option>
+ <option value="boltR-Spec" id="yamaha">BOLT R-SPEC</option>
+ <option value="tmax" id="yamaha">TMAX</option>
+ <option value="xtz125" id="yamaha">XTZ 125</option>
+ <option value="serow250" id="yamaha">Serow 250</option>
+ <option value="mt-03" id="yamaha">MT-03</option>
+ <option value="wr155R" id="yamaha">WR155R</option>
