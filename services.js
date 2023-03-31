@@ -150,9 +150,9 @@ function selectmctype(){
     let lname = document.getElementById("lname").value;
     let email = document.getElementById("email").value;
     let mnum = document.getElementById("mobNum").value;
-    let frommw = document.querySelector(`input[name="question"]:checked`).value;
-   
-  
+    let frommw = document.querySelector(`input[name="frommw"]:checked`).value;
+    
+    
     console.log(service);
     console.log(brand);
     console.log(type);
@@ -171,6 +171,7 @@ function selectmctype(){
       middleName: mname,
       lastName: lname,
       mnum: mnum,
+      email:email,
       requestdate: date,
       request: request,
       service: service,
@@ -184,3 +185,14 @@ function selectmctype(){
   localStorage.setItem('servicerecord', JSON.stringify(clientinquiry));
 
   }
+  function addtoexcel(){
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyzO7RCgisjzRBZ9qUgY22AOFT0_tf_f5bjnvOPgBN1L8ne_0nTN6Vi8F8zHWUHwh1k/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+}

@@ -1,28 +1,3 @@
-function addtoexcell(tableID){
-  let downloadLink;
-  let datatype = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-  let tableselect = Document.getElementById(tableID);
-  let tableHTMl = tableselect.outerHTML.replace(/ /g, '%20');
-
-  filename = 'inquiryform.xls';
-  downloadLink = document.createElement("a");
-  document.body.appendChild(downloadLink);
-
-  if(navigator.msSaveOrOpenBlob)
-  {
-    let blob =  new Blob(['\ufeff' , 'tableHTML'] , {
-          type: datatype
-    });
-    navigator.msSaveOrOpenBlob(blob, filename);
-  }
-  else
-  {
-    downloadLink.href = 'data' + datatype + 'a' + tableHTMl;
-    downloadLink.download = filename;
-    downloadLink.click();
-  }
-
-}
 
 function selectmcbrand(){
   let mctype = ["Scooter" , "OffRoad" , "OnRoad" , "Underbone"];
@@ -156,7 +131,7 @@ function selectmctype(){
     console.log(model);
   }
   function adddata(){
-    let service = document.getElementById("service").value;
+    let payment = document.getElementById("payment").value;
     let brand = document.getElementById("brand").value;
     let type = document.getElementById("type").value;
     let model = document.getElementById("model").value;
@@ -170,7 +145,7 @@ function selectmctype(){
     let mnum = document.getElementById("mobNum").value;
  
   
-    console.log(service);
+    console.log(payment);
     console.log(brand);
     console.log(type);
     console.log(model);
@@ -192,7 +167,7 @@ function selectmctype(){
       mnum: mnum,
       requestdate: date,
       request: request,
-      paymenttype: service,
+      paymenttype: payment,
       brand: brand,
       type: type,
       model: model
@@ -203,5 +178,15 @@ function selectmctype(){
 
   }
 
+  function addtoexcel(){
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyoSthJvC_pnb6W1FRFFHKPUFyPvGrQ7SU8JtHViVZRxEcyZBebqzFCeFYYzEoNIWA/exec'
+    const form = document.forms['submit-to-google-sheet']
   
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  }
   
