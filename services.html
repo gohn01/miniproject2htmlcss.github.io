@@ -49,7 +49,7 @@
                     <h2>Service Appointment</h2>
                 </div>
                 <div class="card-body">
-                    <form action="" name="submit-to-google-sheet">
+                    <form action="" name="submitform">
                         <div class="card-title">
                             <h4>Service Appointment Details</h4>
                         </div>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-lg-3 mb-4">
                                 <label for="brand" class="form-label"><span>*</span> MC Brand</label>
-                                <select name="brand" id="brand" class="form-select" onchange="selectmcbrand()"">
+                                <select name="brand" id="brand" class="form-select" onchange="selectmcbrand()">
                                     <option value="" selected disabled>-select-</option>
                                     <option value="Honda">Honda</option>
                                     <option value="Suzuki">Suzuki</option>
@@ -99,16 +99,16 @@
                             <div class="col-lg-4 mb-4">
                                 <label for="question" class="form-label"><span>*</span> MC Bought from Moto World?</label>
                                 <br>
-                                <input type="radio" name="frommw" id="yes" value ="yes" class="me-2 ms-2">
+                                <input type="radio" name="frommw" id="frommw" value ="yes" class="me-2 ms-2">
                                 <label for="yes">Yes</label> 
-                                <input type="radio" name="frommw" id="no" value="no" class="ms-2 me-2"> 
+                                <input type="radio" name="frommw" id="frommw" value="no" class="ms-2 me-2"> 
                                 <label for="no">No</label>  
                             </div>
                             <div class="col-lg-4 mb-4">
                                 <label for="date" class="form-label"><span>*</span> Preferred Appointment  <a href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Our branch representative will give you a confirmation of your appointment. When your selected date is no longer available you will be provided with the available dates and time to schedule your appointment."><i class="bi bi-info-circle-fill"></i></a>
                                 </label>
                                 <br>
-                                <input class="form-control" type="datetime-local" name="date" id="date">                                
+                                <input class="form-control" type="datetime-local" name="date" id="date" required>                                
                             </div>
                         </div>
                         <hr>
@@ -118,15 +118,15 @@
                         <div class="row">
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> First Name</label>
-                                <input type="text" name="fname" id="fname" class="form-control" placeholder="Juan">
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Juan" >
                             </div>
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> Middle Name</label>
-                                <input type="text" name="mname" id="mname" class="form-control" placeholder="Middle Name">
+                                <input type="text" name="middle_name" id="middle_name" class="form-control" placeholder="Middle Name">
                             </div>
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> Last Name</label>
-                                <input type="text" name="lname" id="lname" class="form-control" placeholder="Dela Cruz">
+                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Dela Cruz" >
                             </div>
                         </div>
                         <div class="row">
@@ -136,14 +136,14 @@
                             </div>
                             <div class="col-lg-6 mb-4">
                                 <label for="mobNum" class="form-label"><span>*</span> Mobile Number (ex. 0912-345-6789)</label>
-                                <input type="number" name="mobNum" id="mobNum" class="form-control" placeholder="09XX-XXXXXXX">
+                                <input type="number" name="mobileNum" id="mobileNum" class="form-control" placeholder="09XX-XXXXXXX">
                             </div>
                         </div>
                    
 
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-danger" onclick="adddata(), addtoexcel()">Submit Form</button>
+                    <button class="btn btn-danger" onclick="addtoexcel()">Submit Form</button>
                 </div>
             </div>
         </form>
@@ -153,6 +153,7 @@
     <div>
         Footer
     </div>
+</div>
     <script src="services.js"></script>
 </body>
 </html>
