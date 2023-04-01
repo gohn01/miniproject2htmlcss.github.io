@@ -18,27 +18,24 @@ nav {
     transition: 0.6s;
     box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
 }
-.navbar-nav a {
+.nav-menu li a{
     position: relative;
   }
-.navbar-nav a::before {
+.nav-menu li a::before {
     content: "";
     position: absolute;
     height: 3px;
-    bottom: 1px;
+    bottom: -5px;
     background-color: red;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
 }
-.navbar-nav a:hover::before, .navbar-nav .active::before {
+.nav-menu li a:hover::before, .nav-menu li .active::before {
     visibility: visible;
     width: 40px;
 }
-.navbar-nav .cart:hover::before {
-    visibility: visible;
-    width: 20px;
-}
+
 /* ABOUT US */
 .aboutus{
     margin-top: 75px;

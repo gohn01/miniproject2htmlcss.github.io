@@ -57,6 +57,24 @@
     padding-right: 100px;
 }
 
+.nav-menu li a{
+    position: relative;
+  }
+  
+.nav-menu li a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -5px;
+    background-color: red;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.nav-menu li a:hover::before, .nav-menu li .active::before {
+    visibility: visible;
+    width: 40px;
+}
 .nav-link {
     transition: 0.7s ease;
 }
