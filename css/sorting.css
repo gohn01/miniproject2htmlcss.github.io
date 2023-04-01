@@ -7,7 +7,7 @@
 }
 ::selection{
   color: #fff;
-  background: #007bff;
+  background: red;
 }
 
 
@@ -35,15 +35,15 @@ body{
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  color: #007bff;
+  color: red;
   border-radius: 50px;
-  border: 2px solid #007bff;
+  border: 2px solid red;
   transition: all 0.3s ease;
 }
 .items span.active,
 .items span:hover{
   color: #fff;
-  background: #007bff;
+  background: red;
 }
 
 /* .gallery{
@@ -136,7 +136,7 @@ body{
   margin-left: 5px;
 }
 .details .icon{
-  color: #007bff;
+  color: red;
   font-style: 22px;
   cursor: pointer;
 }
@@ -318,7 +318,7 @@ body{
 	align-items: center;
 }
 .motor-link .selected {
-	background: #2f90fc;
+	background: red;
 	padding: 5px 10px;
 	border-radius: 4px;
 	color: white;
@@ -364,3 +364,19 @@ body{
     }
   }
  */
+
+ @media(max-width:868px){
+    .motorcycle-logo img {
+        width: 90px;
+    }
+
+    .items{
+
+    }
+
+    .items span{
+        padding: 7px 15px;
+        font-size: 15px;
+        border-radius: 50px;
+      }
+ }
