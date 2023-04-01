@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+.nav-menu li a{
+    position: relative;
+  }
+.nav-menu li a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -5px;
+    background-color: red;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.nav-menu li a:hover::before, .nav-menu li .active::before {
+    visibility: visible;
+    width: 40px;
+}
+
+/* ABOUT US */
+.aboutus{
+    margin-top: 75px;
+}
+.aboutus .card  {
+    background-color: rgb(0, 0, 0);
+    border-radius: 0%;
+}
+.aboutus .info {
+    margin-top: 20%;
+}
+h1{
+    position: relative;
+    font-family: Lucida Calligraphy;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 900;
+}
+h1:before {
+    content: "";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 18%, rgb(0, 0, 0) 100%);
+    animation: animate 5.5s linear forwards infinite;
+}
+@keyframes animate {
+    0% {
+        left: 120%;
+    }
+    100% {
+        left: -120%;
+    }
+}
+h1 span {
+    color: red;
+}
+
+.aboutus .card-footer {
+    display: flex;
+    justify-content: center;
+}
+@keyframes slideInRight {
+    from {
+        transform: translateX(-150px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(150px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.aboutus .alexis img {
+    animation: slideInRight 1s ease-in;
+}
+
+.aboutus .shaira img {
+    animation: slideInLeft 1s ease-in;
+}
+
+.aboutus .albert img {
+    animation: slideInRight 1s ease-in;
+}
+
+/* footer */
+.sub-footer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #000;
+    background-color: #fff;
+}
+
+.sub-footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding: 40px 10px;
+}
+
+.sub-footer h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+footer .colto {
+    padding-left: 0;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+}
+
+footer .follow {
+    margin-top: 10px;
+}
+
+footer .follow i {
+    color: #000;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    padding: 0;
+    margin: 0 ;
+}
+
+.copyright p {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+
+    @media screen and (max-width: 263px) {
+        .card-footer .btn {
+            font-size: 10px;
+        }
+        .footerlogo img {
+            width: 160px;
+        }
+        .copyright p {
+            font-size: 10px;
+        }
+        footer p {
+            font-size: 10px;
+        }
+        .sub-footer h4 {
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        footer a {
+            font-size: 10px;
+            margin: 10px;
+        } 
+    }
+    @media screen and (max-width: 315px) and (max-height: 500px){
+        .card-footer .btn {
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 500px) and (min-width: 264px) {
+        .card-footer .btn {
+            font-size: 13px;
+        }
+        .footerlogo img {
+            width: 160px;
+        }
+        .copyright p {
+            font-size: 13px;
+        }
+        footer p {
+            font-size: 13px;
+        }
+        .sub-footer h4 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        footer a {
+            font-size: 13px;
+            margin: 10px;
+        } 
+    }
+    @media screen and (max-width: 700px) and (min-width: 501px) {
+        .card-footer .btn {
+            font-size: 15px;
+        }
+        .footerlogo img {
+            width: 220px;
+        }
+        .copyright p {
+            font-size: 15px;
+        }
+        footer p {
+            font-size: 15px;
+        }
+        .sub-footer h4 {
+            font-size: 20px;
+        }
+        footer a {
+            font-size: 15px;
+        } 
+    }

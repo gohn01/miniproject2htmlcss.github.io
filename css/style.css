@@ -20,7 +20,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("/images/bg.jpg");
+    background-image: url("../images/bg.jpg");
     color: #fff;
 }
 
@@ -78,7 +78,7 @@ body {
 .contact .intro img {
     width: 100%;
     height: 95vh;
-    margin-top: 70px;
+
     object-fit: cover;
 }
 .contact .title {
@@ -141,7 +141,7 @@ body {
     font-size: 3rem;
     padding: 80px 0;
     text-shadow: 10px 10px 10px #000;
-    background-image: url('/images/istockphoto-1207247256-612x612.jpg');
+    background-image: url("../images/istockphoto-1207247256-612x612.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -356,7 +356,7 @@ body {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/click125BackgroundHover.png");
+    background-image: url("../images/hover/click125BackgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -469,7 +469,7 @@ body {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/suzukiAddressBackgroundHover.png");
+    background-image: url("../images/hover/suzukiAddressBackgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -515,6 +515,7 @@ body {
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
+    z-index: 1;
 }
 .motor-animation2 ul .hover33 {
     list-style: none;
@@ -581,7 +582,7 @@ ul li .content h2 {
     padding: 0;
     height: 76vh;
     background: #333;
-    background-image: url("/images/hover/r15backgroundHover.png");
+    background-image: url("../images/hover/r15backgroundHover.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -694,7 +695,6 @@ ul li .content h2 {
     justify-content: space-between;
     color: #000;
     background-color: #fff;
-    padding: 0 100px;
 }
 
 .sub-footer .col {
@@ -769,8 +769,158 @@ footer .copyright {
 }
 
 
-/* <<<<<<< HEAD
-======= */
+@media screen and (max-width: 315px) and (max-height: 500px){
+
+    .contact .intro img {
+        height: 120vh;
+    }    
+    .contact .intro .title {
+        font-size: 10px;
+        top: 80%;
+        left: 50%;
+        line-break: normal;
+    }
+    .contact .intro .title span{
+        font-size: 15px;
+    }
+    .intro .button a{
+        font-size: 10px;
+    }
+    .info h1 {
+        font-size: 15px;
+    }
+    .info h4 {
+        font-size: 12px;
+    }
+    .info h6 {
+        font-size: 10px;
+    }
+    .info p {
+        font-size: 9px;
+    }
+    .card-header h2 {
+        font-size: 15px;
+    }
+    .card-body .card-title h4{
+        font-size: 13px;
+    }
+    .card-body label{
+        font-size: 12px;
+    }
+    .card-body select,.card-body textarea ,.card-body input{
+        font-size: 10px;
+    }
+    .card-footer button {
+        font-size: 10px;
+    }
+    .footerlogo img {
+        width: 120px;
+    }
+    .main h1 {
+        margin-top: 50%;
+        font-size: 25px;
+        padding: 0 50px;
+    }
+    
+    .main p {
+        padding: 0 50px;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .main a {
+        margin: 0 0 0 50px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    .main-featured h1 {
+        font-size: 20px;
+        padding: 80px 0;
+        text-shadow: 10px 10px 10px #000;
+    }
+    .motor {
+        width: 200px;
+    }
+    .motor img{
+        width: 100%;
+    }
+    .motor h3 {
+        font-size: 20px;
+    }
+    ul li .content h2 {
+        font-size: 9px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .content img {
+        width: 70px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 13%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 40%;
+        left: 45%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 53%;
+        left: 45%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 75%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 35%;
+        left: 28%;
+        width: 10px;
+        height: 10px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 50%;
+        left: 60%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 50%;
+        left: 45%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 40%;
+        left: 30%;
+        width: 10px;
+        height: 10px;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .services .book .title {
         font-size: 15px;
@@ -791,6 +941,7 @@ footer .copyright {
     .services .card-footer button {
         font-size: 10px;
     }
+    
 }
 @media screen and (min-width: 351px) and (max-width: 500px){
     .services .book .title {
@@ -813,29 +964,712 @@ footer .copyright {
         font-size: 13px;
     }
 }
-
-/* >>>>>>> daa86cd76b958aaa671cad6cd9cf6c08673178ed */
-@media screen and (max-width: 315px) and (max-height: 500px){
-
+@media screen and (max-width: 263px) {
+    .contact .title {
+        font-size: 10px;
+    }
+    .footerlogo img {
+        width: 160px;
+    }
+    .copyright p {
+        font-size: 10px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    .sub-footer h4 {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    footer a {
+        font-size: 10px;
+        margin: 10px;
+    } 
     .contact .intro img {
-        height: 120vh;
+        height: 100vh;
     }    
     .contact .intro .title {
-        font-size: 2px;
-        top: 80%;
-        left: 50%;
-        line-break: normal;
+        font-size: 10px;
     }
     .contact .intro .title span{
-        font-size: 5px;
+        font-size: 15px;
     }
-    .intro .button button {
-        font-size: 5px;
+    .intro .button a{
+        font-size: 10px;
     }
+    .info h1 {
+        font-size: 15px;
+    }
+    .info h4 {
+        font-size: 12px;
+    }
+    .info h6 {
+        font-size: 10px;
+    }
+    .info p {
+        font-size: 9px;
+    }
+    .card-header h2 {
+        font-size: 15px;
+    }
+    .card-body .card-title h4{
+        font-size: 13px;
+    }
+    .card-body label{
+        font-size: 12px;
+    }
+    .card-body select,.card-body textarea ,.card-body input{
+        font-size: 10px;
+    }
+    .card-footer button {
+        font-size: 10px;
+    }
+    .main h1 {
+        margin-top: 50%;
+        font-size: 25px;
+        padding: 0 50px;
+    }
+    
+    .main p {
+        padding: 0 50px;
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .main a {
+        margin: 0 0 0 50px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    .main-featured h1 {
+        font-size: 20px;
+        padding: 80px 0;
+        text-shadow: 10px 10px 10px #000;
+    }
+    .motor {
+        width: 200px;
+    }
+    .motor img{
+        width: 100%;
+    }
+    .motor h3 {
+        font-size: 20px;
+    }
+    ul li .content h2 {
+        font-size: 9px;
+    }
+    .content img {
+        width: 70px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation1 ul .hover1 {
+        top: 58%;
+        left: 72%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 10%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 43%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 60%;
+        left: 48%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 78%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 45%;
+        left: 28%;
+        width: 10px;
+        height: 10px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 55%;
+        left: 52%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 53%;
+        left: 35%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 45%;
+        left: 20%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1{
+        background-image: url("../images/hover/click125bgHover.png");
+    }
+    .motor-animation2{
+        background-image: url("../images/hover/suzukiAddressbgHover.png");
+    }
+    .motor-animation3{
+        background-image: url("../images/hover/r15bgHover.png");
+    }
+    
 }
-/* <<<<<<< HEAD
-======= */
+@media screen and (max-width: 350px) {
+    ul li .content h2 {
+        font-size: 9px;
+    }
+    .content img {
+        width: 70px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation1 ul .hover1 {
+        top: 58%;
+        left: 72%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 18%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 43%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 60%;
+        left: 48%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 78%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 45%;
+        left: 28%;
+        width: 10px;
+        height: 10px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 100px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 55%;
+        left: 52%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 53%;
+        left: 35%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 45%;
+        left: 20%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1{
+        background-image: url("../images/hover/click125bgHover.png");
+    }
+    .motor-animation2{
+        background-image: url("../images/hover/suzukiAddressbgHover.png");
+    }
+    .motor-animation3{
+        background-image: url("../images/hover/r15bgHover.png");
+    }
 
-/* >>>>>>> daa86cd76b958aaa671cad6cd9cf6c08673178ed
 }
->>>>>>> e7d58a30b52a94fad7a2a67c07ea769545581262 */
+@media screen and (max-width: 400px) and (min-width: 349px) {
+    ul li .content h2 {
+        font-size: 12px;
+    }
+    .content img {
+        width: 85px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 130px;
+        padding: 15px;
+    }
+    .motor-animation1 ul .hover1 {
+        top: 58%;
+        left: 68%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 18%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 43%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 130px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 60%;
+        left: 48%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 78%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 42%;
+        left: 33%;
+        width: 10px;
+        height: 10px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 130px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 55%;
+        left: 52%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 53%;
+        left: 35%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 45%;
+        left: 20%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1{
+        background-image: url("../images/hover/click125bgHover.png");
+    }
+    .motor-animation2{
+        background-image: url("../images/hover/suzukiAddressbgHover.png");
+    }
+    .motor-animation3{
+        background-image: url("../images/hover/r15bgHover.png");
+    }
+
+}
+@media screen and (max-width: 529px) and (min-width: 399px) {
+    .main h1 {
+        margin-top: 20%;
+        font-size: 38px;
+        padding: 0 50px;
+    }
+    
+    .main p {
+        padding: 0 50px;
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .main a {
+        margin: 0 0 0 50px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .main-featured h1 {
+        font-size: 32px;
+        padding: 80px 0;
+    }
+    .motor {
+        width: 250px;
+    }
+    .motor img{
+        width: 100%;
+    }
+    .motor h3 {
+        font-size: 25px;
+    }
+
+    ul li .content h2 {
+        font-size: 15px;
+    }
+    .content img {
+        width: 120px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation1 ul .hover1 {
+        top: 58%;
+        left: 62%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 25%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 43%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 60%;
+        left: 48%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 78%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 42%;
+        left: 38%;
+        width: 10px;
+        height: 10px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 55%;
+        left: 52%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 53%;
+        left: 40%;
+        width: 10px;
+        height: 10px;
+        z-index: 1;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 45%;
+        left: 30%;
+        width: 10px;
+        height: 10px;
+    }
+    .motor-animation1{
+        background-image: url("../images/hover/click125bgHover.png");
+    }
+    .motor-animation2{
+        background-image: url("../images/hover/suzukiAddressbgHover.png");
+    }
+    .motor-animation3{
+        background-image: url("../images/hover/r15bgHover.png");
+    }
+
+}
+@media screen and (max-width: 700px) and (min-width: 530px) {
+    .main h1 {
+        margin-top: 20%;
+        font-size: 45px;
+        padding: 0 50px;
+    }
+    
+    .main p {
+        padding: 0 50px;
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .main a {
+        margin: 0 0 0 50px;
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+    .main-featured h1 {
+        font-size: 50px;
+        padding: 80px 0;
+    }
+    .motor {
+        width: 330px;
+    }
+    .motor img{
+        width: 100%;
+    }
+    .motor h3 {
+        font-size: 25px;
+    }
+
+    ul li .content h2 {
+        font-size: 20px;
+    }
+    .content img {
+        width: 120px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .motor-animation1 ul li .content {
+        bottom: 20px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation1 ul .hover1 {
+        top: 58%;
+        left: 62%;
+        width: 15px;
+        height: 15px;
+        z-index: 1;
+    }
+    .motor-animation1 ul .hover2 {
+        top: 70%;
+        left: 25%;
+        width: 15px;
+        height: 15px;
+    }
+    .motor-animation1 ul .hover3 {
+        top: 43%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+    }
+    .motor-animation2 ul li .content {
+        bottom: 20px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation2 ul .hover11 {
+        top: 55%;
+        left: 52%;
+        width: 15px;
+        height: 15px;
+        z-index: 1;
+    }
+    .motor-animation2 ul .hover22 {
+        top: 78%;
+        left: 60%;
+        width: 15px;
+        height: 15px;
+    }
+    .motor-animation2 ul .hover33 {
+        top: 35%;
+        left: 32%;
+        width: 15px;
+        height: 15px;
+    
+    }
+    .motor-animation3 ul li .content {
+        bottom: 45px;
+        width: 150px;
+        padding: 15px;
+    }
+    .motor-animation3 ul .hover111 {
+        top: 50%;
+        left: 65%;
+        width: 15px;
+        height: 15px;
+    }
+    .motor-animation3 ul .hover222 {
+        top: 53%;
+        left: 40%;
+        width: 15px;
+        height: 15px;
+        z-index: 1;
+    }
+    .motor-animation3 ul .hover333 {
+        top: 45%;
+        left: 30%;
+        width: 15px;
+        height: 15px;
+    }
+
+}
+
+@media screen and (max-width: 526px) and (min-width: 264px) {
+    .footerlogo img {
+        width: 160px;
+    }
+    .copyright p {
+        font-size: 13px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+    .sub-footer h4 {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    footer a {
+        font-size: 13px;
+        margin: 10px;
+    } 
+    .contact .intro img {
+        height: 100vh;
+    }    
+    .contact .intro .title {
+        font-size: 15px;
+    }
+    .contact .intro .title span{
+        font-size: 25px;
+    }
+    .intro .button a{
+        font-size: 15px;
+    }
+    .info h1 {
+        font-size: 20px;
+    }
+    .info h4 {
+        font-size: 16px;
+    }
+    .info h6 {
+        font-size: 13px;
+    }
+    .info p {
+        font-size: 13px;
+    }
+    .card-header h2 {
+        font-size: 20px;
+    }
+    .card-body .card-title h4{
+        font-size: 15px;
+    }
+    .card-body label{
+        font-size: 13px;
+    }
+    .card-body select,.card-body textarea ,.card-body input{
+        font-size: 13px;
+    }
+    .card-footer button {
+        font-size: 13px;
+    }
+    .main h1 {
+        margin-top: 50%;
+        font-size: 35px;
+        padding: 0 50px;
+    }
+    
+    .main p {
+        padding: 0 50px;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .main a {
+        margin: 0 0 0 50px;
+        padding: 10px 15px;
+        font-size:15px;
+    }
+    .main-featured h1 {
+        font-size: 30px;
+        padding: 80px 0;
+        text-shadow: 10px 10px 10px #000;
+    }
+    .motor {
+        width: 250px;
+    }
+    .motor img{
+        width: 100%;
+    }
+    .motor h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 700px) and (min-width: 525px) {
+    .footerlogo img {
+        width: 220px;
+    }
+    .copyright p {
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 15px;
+    }
+    .sub-footer h4 {
+        font-size: 20px;
+    }
+    footer a {
+        font-size: 15px;
+    } 
+}
