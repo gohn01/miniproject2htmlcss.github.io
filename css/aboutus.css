@@ -9,15 +9,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: black;
 }
-nav .navbar-brand img {
-    margin: 0%;
-    width: 200px;
-}
-nav {
-    border-bottom: 1px solid #ccc;
-    transition: 0.6s;
-    box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
-}
 .nav-menu li a{
     position: relative;
   }
@@ -110,31 +101,153 @@ h1 span {
     animation: slideInRight 1s ease-in;
 }
 
-@media screen and (max-width: 263px) {
-    nav .navbar-brand img{
-        max-width: 110px;
-    }
-    nav .navbar-toggler-icon {
-        font-size: 12px;
-    }
-    .card-footer .btn {
-        font-size: 10px;
-    }
-    
+/* footer */
+.sub-footer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #000;
+    background-color: #fff;
 }
-@media screen and (max-width: 315px) and (max-height: 500px){
-    nav .navbar-brand img {
-        width: 150px;
-    }
-    nav .navbar-toggler {
-        font-size: 15px;
-    }
-    .card-footer .btn {
-        font-size: 10px;
-    }
+
+.sub-footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding: 40px 10px;
 }
-@media screen and (max-width: 796px){
-    nav .navbar-nav a {
-        font-size: 14px;
-    }
+
+.sub-footer h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
 }
+
+footer .colto {
+    padding-left: 0;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+}
+
+footer .follow {
+    margin-top: 10px;
+}
+
+footer .follow i {
+    color: #000;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    padding: 0;
+    margin: 0 ;
+}
+
+.copyright p {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+
+    @media screen and (max-width: 263px) {
+        .card-footer .btn {
+            font-size: 10px;
+        }
+        .footerlogo img {
+            width: 160px;
+        }
+        .copyright p {
+            font-size: 10px;
+        }
+        footer p {
+            font-size: 10px;
+        }
+        .sub-footer h4 {
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        footer a {
+            font-size: 10px;
+            margin: 10px;
+        } 
+    }
+    @media screen and (max-width: 315px) and (max-height: 500px){
+        .card-footer .btn {
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 500px) and (min-width: 264px) {
+        .card-footer .btn {
+            font-size: 13px;
+        }
+        .footerlogo img {
+            width: 160px;
+        }
+        .copyright p {
+            font-size: 13px;
+        }
+        footer p {
+            font-size: 13px;
+        }
+        .sub-footer h4 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        footer a {
+            font-size: 13px;
+            margin: 10px;
+        } 
+    }
+    @media screen and (max-width: 700px) and (min-width: 501px) {
+        .card-footer .btn {
+            font-size: 15px;
+        }
+        .footerlogo img {
+            width: 220px;
+        }
+        .copyright p {
+            font-size: 15px;
+        }
+        footer p {
+            font-size: 15px;
+        }
+        .sub-footer h4 {
+            font-size: 20px;
+        }
+        footer a {
+            font-size: 15px;
+        } 
+    }
