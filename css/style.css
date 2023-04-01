@@ -9,6 +9,21 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* contact inquire button */
+.inquire{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.inquire:hover {
+    background-color: red;
+    border: 1px solid red;
+}
+
 .motor-links .active {
     background-color: red;
 }
@@ -43,6 +58,7 @@ body {
     margin: 0;
     margin-bottom: 50px;
     color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .main a {
@@ -51,6 +67,7 @@ body {
     margin: 0 0 0 100px;
     padding: 10px 15px;
     border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -166,7 +183,7 @@ body {
 }
 
 .motor img {
-    width: 400px;
+    width: 100%;
 }
 
 .motor h3 {
@@ -474,6 +491,7 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
+    z-index: 100;
 }
 
 
