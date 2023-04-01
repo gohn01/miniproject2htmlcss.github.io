@@ -138,61 +138,96 @@ function selectmctype(){
   }
 
 
-  function adddata(){
-    let service = document.getElementById("service").value;
-    let brand = document.getElementById("brand").value;
-    let type = document.getElementById("type").value;
-    let model = document.getElementById("model").value;
-    let request = document.getElementById("request").value;
-    let date = document.getElementById("date").value;
-    let fname = document.getElementById("fname").value;
-    let mname = document.getElementById("mname").value;
-    let lname = document.getElementById("lname").value;
-    let email = document.getElementById("email").value;
-    let mnum = document.getElementById("mobNum").value;
-    let frommw = document.querySelector(`input[name="frommw"]:checked`).value;
-    
-    
-    console.log(service);
-    console.log(brand);
-    console.log(type);
-    console.log(model);
-    console.log(request);
-    console.log(date);
-    console.log(fname);
-    console.log(mname);
-    console.log(lname);
-    console.log(email);
-    console.log(mnum);
-
-    let clientinquiry = {
-      clientId: Date.now(),
-      firstName: fname,
-      middleName: mname,
-      lastName: lname,
-      mnum: mnum,
-      email:email,
-      requestdate: date,
-      request: request,
-      service: service,
-      brand: brand,
-      type: type,
-      model: model,
-      fromMW: frommw,
-  }
+  // function adddata(){
+  //   let service = document.getElementById("service").value;
+  //   let brand = document.getElementById("brand").value;
+  //   let type = document.getElementById("type").value;
+  //   let model = document.getElementById("model").value;
+  //   let request = document.getElementById("request").value;
+  //   let frommw = document.querySelector(`input[name="frommw"]:checked`).value;
+  //   let date = document.getElementById("date").value;
+  //   let fname = document.getElementById("first_name").value;
+  //   let mname = document.getElementById("middle_name").value;
+  //   let lname = document.getElementById("last_name").value;
+  //   let email = document.getElementById("email").value;
+  //   let mnum = document.getElementById("mobileNum").value;
+ 
+  
+  //   console.log(service);
+  //   console.log(brand);
+  //   console.log(type);
+  //   console.log(model);
+  //   console.log(request);
+  //   console.log(date);
+  //   console.log(fname);
+  //   console.log(mname);
+  //   console.log(lname);
+  //   console.log(address);
+  //   console.log(email);
+  //   console.log(mnum);
+  //   console.log(frommw);
+  //   let frm = document.getElementsByName('submitform')[0];
+  //   if (fname === null || fname ==="")
+  //   {
+  //     alert("Please Enter your First Name.");
+      
+  //     frm.submit(); // Submit the form
+  //     frm.reset();  // Reset all form data
+  //     return false; // Prevent page refresh
+  //   }
+  //   else if (lname === null || lname ==="")
+  //   {
+  //     alert("Please Enter your Last Name");
+  //     frm.submit(); // Submit the form
+  //     frm.reset();  // Reset all form data
+  //     return false; // Prevent page refresh
+  //   }
+  //   else if (address === null || address === "")
+  //   {
+  //     alert("Please Enter your Address");
+  //     frm.submit(); // Submit the form
+  //     frm.reset();  // Reset all form data
+  //     return false; // Prevent page refresh
+  //   }
+  //   else if (mnum === null || mnum === "")
+  //   {
+  //     alert("Please Enter your Cellphone number");
+  //     frm.submit(); // Submit the form
+  //     frm.reset();  // Reset all form data
+  //     return false; // Prevent page refresh
+  //   }
+  //   else{
+  //   let clientinquiry = {
+  //     clientId: Date.now(),
+  //     firstName: fname,
+  //     middleName: mname,
+  //     lastName: lname,
+  //     address: address,
+  //     mnum: mnum,
+  //     requestdate: date,
+  //     request: request,
+  //     service: service,
+  //     brand: brand,
+  //     type: type,
+  //     model: model,
+  //     frommw: frommw
+  // }
   
   
-  localStorage.setItem('servicerecord', JSON.stringify(clientinquiry));
+  // localStorage.setItem('serviceinquiry', JSON.stringify(clientinquiry));
 
-  }
+  // }
+  //}
+  
   function addtoexcel(){
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyzO7RCgisjzRBZ9qUgY22AOFT0_tf_f5bjnvOPgBN1L8ne_0nTN6Vi8F8zHWUHwh1k/exec'
-  const form = document.forms['submit-to-google-sheet']
+  const form = document.forms['submitform']
 
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => console.log('Success!', form.reset(), alert("Reservation Sent. Please wait for admin confirmation via text message. Thank You!")))
       .catch(error => console.error('Error!', error.message))
-  })
+  }
+  )
 }
