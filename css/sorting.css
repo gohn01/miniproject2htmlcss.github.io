@@ -275,6 +275,7 @@ body{
     border: 1px solid #ccc;
     border: 1px solid #dddcdc;
     box-shadow: 0 5px 15px rgba(0, 0,0, 0.06);
+    padding: 0 10px;
 }
 
 .image p {
@@ -301,15 +302,25 @@ body{
     transform: scale(1.1);
 }
 
-.image button {
+.image a {
     color: #fff;
     outline: none;
     border: 0;
+    text-decoration: none;
     background-color: red;
-    margin: 10px 15px;
-    padding: 10px 10px;
-    width: 90%;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    transition: 0.3s;
 }
+
+.image a:hover {
+  background-color: #454545;
+}
+
 .motor-link {
 	list-style: none;
 	margin-bottom: 40px;
@@ -368,6 +379,7 @@ body{
  @media(max-width:868px){
     .motorcycle-logo img {
         width: 90px;
+        height: 80px;
     }
 
     .items span{
