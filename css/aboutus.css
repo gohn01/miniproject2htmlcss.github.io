@@ -9,6 +9,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: black;
 }
+@font-face {
+    font-family: lucida calligraphy;
+    src: url(LucidaCalligraphyFont.ttf);
+}
 .nav-menu li a{
     position: relative;
   }
