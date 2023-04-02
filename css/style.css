@@ -404,6 +404,7 @@ body {
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
+    z-index: 1;
 }
 .motor-animation1 ul .hover2 {
     list-style: none;
@@ -518,6 +519,7 @@ body {
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
+    z-index: 1;
 }
 .motor-animation2 ul .hover22 {
     list-style: none;
@@ -646,6 +648,7 @@ ul li .content h2 {
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
+    z-index: 1;
 }
 .motor-animation3 ul .hover333 {
     list-style: none;
