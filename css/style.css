@@ -95,7 +95,7 @@ body {
 
 .contact .intro img {
     width: 100%;
-    height: 95vh;
+    height: 100vh;
 
     object-fit: cover;
 }
@@ -770,8 +770,72 @@ footer .copyright {
     padding-bottom: 5px;
 }
 
+    @media screen and (max-width: 250px) and (max-height: 500px){
 
-    @media screen and (max-width: 315px) and (max-height: 500px){
+        .contact .intro img {
+            height: 120vh;
+        }    
+        .contact .intro .title {
+            font-size: 10px;
+            top: 65%;
+            left: 50%;
+            line-break: normal;
+        }
+    }
+
+    @media screen and (max-width: 700px) and (max-height: 500px){
+
+        .contact .intro img {
+            height: 120vh;
+        }    
+        .contact .intro .title {
+            font-size: 15px;
+            top: 65%;
+            left: 50%;
+            line-break: normal;
+        }
+        .contact .intro .title span{
+            font-size: 25px;
+        }
+        .intro .button a{
+            font-size: 10px;
+        }
+        .intro .button a{
+            font-size: 10px;
+        }
+        .info h1 {
+            font-size: 20px;
+        }
+        .info h4 {
+            font-size: 18px;
+        }
+        .info h6 {
+            font-size: 15px;
+        }
+        .info p {
+            font-size: 15px;
+        }
+        .card-header h2 {
+            font-size: 20px;
+        }
+        .card-body .card-title h4{
+            font-size: 18px;
+        }
+        .card-body label{
+            font-size: 15px;
+        }
+        .card-body select,.card-body textarea ,.card-body input{
+            font-size: 15px;
+        }
+        .card-footer button {
+            font-size: 15px;
+        }
+
+
+    }
+
+
+    @media screen and (max-width: 315px) and (min-width: 250px) and (max-height: 500px){
 
         .contact .intro img {
             height: 120vh;
