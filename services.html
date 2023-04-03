@@ -8,6 +8,8 @@
 
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Moto World</title>
     <link rel="stylesheet" href="css/style.css">
@@ -120,15 +122,15 @@
                         <div class="row">
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> First Name</label>
-                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Juan" required>
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Juan" >
                             </div>
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> Middle Name</label>
-                                <input type="text" name="middle_name" id="middle_name" class="form-control" placeholder="Middle Name" required >
+                                <input type="text" name="middle_name" id="middle_name" class="form-control" placeholder="Middle Name"  >
                             </div>
                             <div class="col-lg-4 mb-4">
                                 <label for="fname" class="form-label"><span>*</span> Last Name</label>
-                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Dela Cruz" required>
+                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Dela Cruz" >
                             </div>
                         </div>
                         <div class="row">
@@ -138,29 +140,19 @@
                             </div>
                             <div class="col-lg-6 mb-4">
                                 <label for="mobNum" class="form-label"><span>*</span> Mobile Number (ex. 0912-345-6789)</label>
-                                <input type="number" name="mobileNum" id="mobileNum" class="form-control" placeholder="09XX-XXXXXXX" required>
+                                <input type="number" name="mobileNum" id="mobileNum" class="form-control" placeholder="09XX-XXXXXXX" >
                             </div>
                         </div>
                    
 
                 </div>
                 <div class="card-footer text-center">
-                    <button class="btn btn-danger" onclick=" addtoexcel()">Submit Form</button>
+                    <button class="btn btn-danger" onclick="adddata(), addtoexcel()">Submit Form</button>
                 </div>
             </div>
         </form>
         </div>
     </div>
-
-<<<<<<< HEAD
-    <div>
-        Footer
-    </div>
-</div>
-    <script src="js/submain.js"></script>
-    <script src="js/hamburger.js"></script>
-=======
-    <!-- footer -->
 
     <footer>
         <div class="sub-footer">
@@ -170,12 +162,15 @@
                 <a href="#">Honda ADV160</a>
                 <a href="#">Yamaha Mio Gear</a>
                 <a href="#">Suzuki Burgman</a>
-                <a href="#">INQUIRE NOW</a>
+                <a href="contactus.html" class="inquire text-black">INQUIRE NOW</a>
             </div>
             
             <div class="col">
                 <h4>About</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio similique doloremque enim veritatis nemo! Atque sit nesciunt magni recusandae velit enim neque corrupti tempore magnam laborum nostrum, consequatur illo?</p>
+                <p>A motorcycle shop website which allows the user or client to view 
+                    different kind of motorcycle so they can choose regarding to their perspective or means of use.
+                    It is also to promote their company to the motorcycle enthusiasts and users.
+                </p>
             </div>
     
 
@@ -190,7 +185,7 @@
             
             <div class="col">
                 <h4 class="colto">Contact</h4>
-                <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Framcisco</p>
+                <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
                 <p><strong>Phone Number:</strong> 09123456789</p>
                 <p><strong>Landline Number:</strong>(02)-1234-5678</p>
                 <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
@@ -213,9 +208,9 @@
             <p>&copy; 2023, Tech2 etc - HTML CSS Ecommerce Template</p>
         </div>
     </footer>
-
-    
->>>>>>> 7b96273101b95f8284bb81765ce0e9e1c9bfc1b2
+</div>
+    <script src="js/submain.js"></script>
+    <script src="js/hamburger.js"></script>
     <script src="js/services.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
