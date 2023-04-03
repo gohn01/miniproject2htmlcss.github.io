@@ -129,6 +129,11 @@ function selectmctype(){
     let model = document.getElementById("model").value;
     console.log(model);
   }
+  function modelchange()
+  {
+    let model = document.getElementById("model").value;
+    console.log(model);
+  }
   function adddata(){
     let service = document.getElementById("service").value;
     let brand = document.getElementById("brand").value;
