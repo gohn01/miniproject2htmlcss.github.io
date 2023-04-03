@@ -10,10 +10,6 @@
   background: red;
 }
 
-
-body{
-  padding: 10px;
-}
 .wrapper{
   display: flex;
   justify-content: center;
