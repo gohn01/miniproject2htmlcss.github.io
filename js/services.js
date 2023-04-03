@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-// //Popover in Information Icon
-// var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-// var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-//   return new bootstrap.Popover(popoverTriggerEl)
-// })
-
-
->>>>>>> e93e6e0c8bbb5e9c5dbf20ef2bd9ec797e976e90
 function selectmcbrand(){
   let mctype = ["Scooter" , "OffRoad" , "OnRoad" , "Underbone"];
   
