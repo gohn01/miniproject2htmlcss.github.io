@@ -22,6 +22,7 @@ body {
 .inquire:hover {
     background-color: red;
     border: 1px solid red;
+    color: white;
 }
 
 .motor-links .active {
@@ -724,6 +725,7 @@ footer a {
     text-decoration: none;
     color: #000;
     margin: 10px;
+    transition: 0.3s;
 }
 
 footer .follow {
@@ -734,6 +736,7 @@ footer .follow i {
     color: #000;
     padding-right: 4px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 footer .install .row img {
@@ -743,11 +746,12 @@ footer .install .row img {
 
 footer .install img {
     margin: 10px 0 15px 0;
+
 }
 
 footer .follow i:hover,
 footer a:hover {
-    color: #088178;
+    color: red;
 }
 
 footer .copyright {
